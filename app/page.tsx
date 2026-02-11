@@ -1,85 +1,77 @@
 export default function Home() {
   return (
     <main>
-      <h1>UCP Discovery Test App</h1>
+      <header style={{ textAlign: 'center', marginBottom: '3rem' }}>
+        <h1 style={{ fontSize: '3rem', color: '#c73e1d', marginBottom: '0.5rem' }}>Jordan&apos;s Tomato Store</h1>
+        <p style={{ fontSize: '1.2rem', color: '#666' }}>Fresh, Locally Grown Tomatoes Since 2020</p>
+      </header>
 
-      <section>
-        <h2>What is this?</h2>
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ color: '#c73e1d' }}>Welcome to Our Farm</h2>
         <p>
-          This is a minimal Next.js application deployed on Vercel to test UCP (Universal Commerce Protocol)
-          discovery. It serves a UCP manifest at the standard discovery endpoint and logs every request.
+          At Jordan&apos;s Tomato Store, we take pride in growing the finest, most flavorful tomatoes in the region.
+          Our family-owned farm has been cultivating premium tomatoes for over four years, using sustainable
+          farming practices and time-tested techniques passed down through generations.
         </p>
       </section>
 
-      <section>
-        <h2>Discovery Endpoint</h2>
-        <p>
-          The UCP manifest is available at:
-        </p>
-        <pre style={{ background: '#f4f4f4', padding: '1rem', borderRadius: '4px', overflow: 'auto' }}>
-          <code>GET /.well-known/ucp</code>
-        </pre>
-        <p>
-          Every request to this endpoint is logged to stdout in JSON format for debugging.
-        </p>
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ color: '#c73e1d' }}>Our Tomato Varieties</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ border: '1px solid #e0e0e0', padding: '1rem', borderRadius: '8px' }}>
+            <h3>Heritage Beefsteak</h3>
+            <p style={{ color: '#666', fontSize: '0.9rem' }}>Large, meaty tomatoes perfect for slicing. Rich, complex flavor.</p>
+            <p style={{ fontWeight: 'bold', marginTop: '0.5rem' }}>$6.99/lb</p>
+          </div>
+          <div style={{ border: '1px solid #e0e0e0', padding: '1rem', borderRadius: '8px' }}>
+            <h3>Cherry Tomatoes</h3>
+            <p style={{ color: '#666', fontSize: '0.9rem' }}>Sweet and juicy. Perfect for salads and snacking.</p>
+            <p style={{ fontWeight: 'bold', marginTop: '0.5rem' }}>$4.99/pint</p>
+          </div>
+          <div style={{ border: '1px solid #e0e0e0', padding: '1rem', borderRadius: '8px' }}>
+            <h3>Roma Tomatoes</h3>
+            <p style={{ color: '#666', fontSize: '0.9rem' }}>Ideal for sauces and canning. Low moisture, intense flavor.</p>
+            <p style={{ fontWeight: 'bold', marginTop: '0.5rem' }}>$5.49/lb</p>
+          </div>
+          <div style={{ border: '1px solid #e0e0e0', padding: '1rem', borderRadius: '8px' }}>
+            <h3>Heirloom Mix</h3>
+            <p style={{ color: '#666', fontSize: '0.9rem' }}>Colorful assortment of unique heirloom varieties.</p>
+            <p style={{ fontWeight: 'bold', marginTop: '0.5rem' }}>$7.99/lb</p>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <h2>Try it yourself</h2>
-        <p>Test the discovery endpoint with curl:</p>
-        <pre style={{ background: '#f4f4f4', padding: '1rem', borderRadius: '4px', overflow: 'auto' }}>
-          <code>{`curl -i https://YOUR-DEPLOYMENT-URL/.well-known/ucp`}</code>
-        </pre>
-        <p>Or try the ping endpoint:</p>
-        <pre style={{ background: '#f4f4f4', padding: '1rem', borderRadius: '4px', overflow: 'auto' }}>
-          <code>{`curl -i https://YOUR-DEPLOYMENT-URL/api/ping`}</code>
-        </pre>
-      </section>
-
-      <section>
-        <h2>What to look for in Vercel logs</h2>
-        <p>After making a request, check your Vercel deployment logs. You should see structured JSON output like:</p>
-        <pre style={{ background: '#f4f4f4', padding: '1rem', borderRadius: '4px', overflow: 'auto', fontSize: '0.85rem' }}>
-          <code>{`{
-  "timestamp": "2026-02-11T10:30:45.123Z",
-  "method": "GET",
-  "path": "/.well-known/ucp",
-  "status": 200,
-  "host": "your-app.vercel.app",
-  "proto": "https",
-  "ip": "1.2.3.4",
-  "userAgent": "curl/7.79.1",
-  "accept": "*/*",
-  "requestId": "xyz123"
-}`}</code>
-        </pre>
-      </section>
-
-      <section>
-        <h2>Features</h2>
-        <ul>
-          <li>✓ Next.js App Router with Node.js runtime</li>
-          <li>✓ Standard <code>/.well-known/ucp</code> discovery path</li>
-          <li>✓ Proper Content-Type and Cache-Control headers</li>
-          <li>✓ Dynamic host/protocol detection from request headers</li>
-          <li>✓ Environment variable override via <code>UCP_ENDPOINT_OVERRIDE</code></li>
-          <li>✓ Structured JSON logging to stdout</li>
-          <li>✓ No external dependencies or databases</li>
+      <section style={{ marginBottom: '3rem', background: '#f9f9f9', padding: '2rem', borderRadius: '8px' }}>
+        <h2 style={{ color: '#c73e1d' }}>Why Choose Our Tomatoes?</h2>
+        <ul style={{ fontSize: '1.05rem' }}>
+          <li>🌱 100% organic, pesticide-free growing methods</li>
+          <li>🚜 Harvested fresh daily at peak ripeness</li>
+          <li>📦 Same-day delivery available in the local area</li>
+          <li>👨‍🌾 Family-owned and operated with care</li>
+          <li>🌍 Sustainable farming practices that protect our land</li>
         </ul>
       </section>
 
-      <section>
-        <h2>Environment Variables</h2>
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ color: '#c73e1d' }}>Order Information</h2>
         <p>
-          Optional: Set <code>UCP_ENDPOINT_OVERRIDE</code> to override the auto-detected endpoint URL
-          in the manifest (useful for testing or custom domain configurations).
+          We offer convenient delivery options throughout the week. Place your order by 6 PM for next-day delivery.
+          All tomatoes are hand-picked the morning of delivery to ensure maximum freshness.
+        </p>
+        <p style={{ marginTop: '1rem' }}>
+          <strong>Delivery Areas:</strong> Currently serving the greater metro area and surrounding counties.
+        </p>
+        <p style={{ marginTop: '1rem' }}>
+          <strong>Minimum Order:</strong> $15
         </p>
       </section>
 
-      <footer style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #e0e0e0', color: '#666' }}>
-        <p>
-          <a href="/.well-known/ucp" style={{ marginRight: '1rem' }}>View UCP Manifest</a>
-          <a href="/api/ping">Test Ping Endpoint</a>
+      <footer style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #e0e0e0', color: '#666', textAlign: 'center' }}>
+        <p style={{ marginBottom: '0.5rem' }}>
+          <strong>Jordan&apos;s Tomato Store</strong>
+        </p>
+        <p style={{ fontSize: '0.9rem' }}>
+          Fresh tomatoes delivered with care | Family-owned since 2020
         </p>
       </footer>
     </main>

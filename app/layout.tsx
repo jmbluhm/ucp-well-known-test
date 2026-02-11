@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'UCP Discovery Test',
-  description: 'Minimal Next.js app for testing UCP discovery on Vercel',
+  title: "Jordan's Tomato Store - Fresh, Locally Grown Tomatoes",
+  description: 'Premium locally grown tomatoes delivered fresh to your door. Family-owned since 2020.',
 };
 
 export default function RootLayout({
