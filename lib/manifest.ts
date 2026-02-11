@@ -32,7 +32,7 @@ const BASE_MANIFEST = {
     tools: [
       {
         name: 'get_subscription_plans',
-        description: 'Fetch all available subscription plans with pricing, features, and billing cycles. Returns a list of active subscription plans that customers can purchase.',
+        description: 'Get available tomato delivery subscription options with pricing and delivery schedules. Returns weekly, bi-weekly, and monthly farm box plans.',
         input_schema: {
           type: 'object',
           properties: {
@@ -43,7 +43,7 @@ const BASE_MANIFEST = {
             },
             include_trial: {
               type: 'boolean',
-              description: 'Whether to include plans that offer free trials',
+              description: 'Whether to include plans with introductory offers',
               default: true,
             },
           },
@@ -56,29 +56,29 @@ const BASE_MANIFEST = {
       },
       {
         name: 'generate_checkout_link',
-        description: 'Generate a secure checkout link for a specific subscription plan. Returns a URL that the customer can use to complete their purchase. The link expires after 24 hours.',
+        description: 'Generate a checkout link for a tomato delivery subscription. Returns a secure URL for completing the farm box purchase. The link expires after 24 hours.',
         input_schema: {
           type: 'object',
           properties: {
             plan_id: {
               type: 'string',
-              description: 'The unique identifier of the subscription plan to purchase',
+              description: 'The delivery plan identifier (weekly, bi-weekly, or monthly)',
             },
             success_url: {
               type: 'string',
-              description: 'URL to redirect the customer after successful payment',
+              description: 'URL to redirect after successful order',
             },
             cancel_url: {
               type: 'string',
-              description: 'URL to redirect the customer if they cancel the checkout',
+              description: 'URL to redirect if customer cancels',
             },
             customer_email: {
               type: 'string',
-              description: 'Pre-fill the checkout form with this email address',
+              description: 'Pre-fill checkout with customer email',
             },
             metadata: {
               type: 'object',
-              description: 'Optional metadata to attach to the checkout session',
+              description: 'Optional order details',
               additionalProperties: true,
             },
           },

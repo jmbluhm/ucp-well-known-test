@@ -1,0 +1,7 @@
+# Jordan's Tomato Store - Allow all crawlers
+User-agent: *
+Allow: /
+Allow: /.well-known/
+
+# Sitemap location
+Sitemap: https://jordans-tomato-store.vercel.app/sitemap.xml
